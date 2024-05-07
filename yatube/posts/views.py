@@ -4,15 +4,14 @@ from django.template import loader
 
 
 def index(request):
+    text = "Это главная страница проекта Yatube"
+    context = {"text": text}
     template = 'posts/index.html'
-    return render(request, template)
-
-    # return HttpResponse(
-    #     'Ты <i>не можешь</i> получить правильные <b>ответы</b>,<br> '
-    #     'если у тебя нет правильных <s>вопросов</s> запросов.'
-    # )
+    return render(request, template, context)
 
 
 def group_posts(request, slug):
+    text = "Здесь будет информация о группах проекта Yatube"
+    context = {"text": text}
     template = 'posts/group_list.html'
-    return render(request, template)
+    return render(request, template, context)

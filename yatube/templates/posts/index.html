@@ -7,6 +7,7 @@
 {% block content %}
   <!-- класс py-5 создает отступы сверху и снизу блока -->
       <div class="container py-5">
+        <h1>{{text}}</h1>
         <h1>Последние обновления на сайте</h1>
         <article>
           <ul>
@@ -25,7 +26,8 @@
             и Бабарыкинымъ, ругалъ Сержпутовскому и ничего не сдѣлалъ, вотъ 3 упрека, которыя дѣлаю с
             ебѣ за нынѣшній день. (3)
           </p>
-          <a href="group_list.html">все записи группы</a>
+          {% comment %}<a href="group_list.html">все записи группы</a>{% endcomment %}
+          <a href="{% url 'posts:posts_group' group_posts.slug %}">все записи группы</a>
         </article>
         <hr>
         <article>
