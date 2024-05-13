@@ -26,8 +26,10 @@
             и Бабарыкинымъ, ругалъ Сержпутовскому и ничего не сдѣлалъ, вотъ 3 упрека, которыя дѣлаю с
             ебѣ за нынѣшній день. (3)
           </p>
-          {% comment %}<a href="group_list.html">все записи группы</a>{% endcomment %}
-          <a href="{% url 'posts:posts_group' group_posts.slug %}">все записи группы</a>
+          <a href="group_list.html">все записи группы</a>
+         {% comment %} <a href="{% url 'posts:posts_group' group_posts.slug %}">все записи группы</a>{% endcomment %}
+          <a href="{% url 'posts:posts_group' %}">все записи группы</a>
+         {% comment %}...{% endcomment %}
         </article>
         <hr>
         <article>
